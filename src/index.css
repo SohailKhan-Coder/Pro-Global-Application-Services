@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #C8A46D;
+  --color-gold-hover: #D9B880;
+  --color-gold-dark: #A6834F;
+  --color-dark-bg: #0A0A0A;
+  --color-dark-gray: #121212;
+  --color-dark-card: #181818;
+  --color-gold-muted: rgba(200, 164, 109, 0.15);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #C8A46D #0A0A0A;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Utilities for Premium Visual Appeal */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF 30%, #C8A46D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#121212, #121212), linear-gradient(135deg, rgba(200, 164, 109, 0.4) 0%, rgba(200, 164, 109, 0.05) 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(200, 164, 109, 0.15);
+}
+
+.gold-glow-strong {
+  box-shadow: 0 0 40px rgba(200, 164, 109, 0.3);
+}
+
+.glass-panel {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-gold {
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(200, 164, 109, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8A46D;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D9B880;
+}
+
+/* Dots Grid Background Overlay */
+.dots-grid {
+  background-image: radial-gradient(rgba(200, 164, 109, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+

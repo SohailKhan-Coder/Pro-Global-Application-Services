@@ -1,0 +1,8 @@
+{
+  "name": "Pro Global Application Services",
+  "description": "Premium global application processing, administrative support, data entry, academic formatting, and document management services for student consultancies and agencies worldwide.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
