@@ -482,25 +482,6 @@ setTimeout(() => {
         </a>
       </div>
 
-      {/* Success Popup */}
-      <AnimatePresence>
-        {showSuccessPopup && (
-  <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/70">
-    <div className="bg-[#121212] rounded-2xl p-8 border border-green-500 shadow-2xl text-center">
-      <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
-
-      <h2 className="text-white text-xl font-bold mb-2">
-        Success
-      </h2>
-
-      <p className="text-gray-300">
-        Inquiry Submitted Successfully
-      </p>
-    </div>
-  </div>
-)}
-      </AnimatePresence>
-
     </section>
   );
 }

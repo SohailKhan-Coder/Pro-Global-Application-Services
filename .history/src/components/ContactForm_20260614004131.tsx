@@ -485,20 +485,35 @@ setTimeout(() => {
       {/* Success Popup */}
       <AnimatePresence>
         {showSuccessPopup && (
-  <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/70">
-    <div className="bg-[#121212] rounded-2xl p-8 border border-green-500 shadow-2xl text-center">
-      <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.8, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.8, y: 20 }}
+              transition={{ duration: 0.3 }}
+              className="bg-[#121212] border border-green-500/30 rounded-2xl px-10 py-8 shadow-2xl"
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/20 flex items-center justify-center">
+                  <CheckCircle className="w-10 h-10 text-green-400" />
+                </div>
 
-      <h2 className="text-white text-xl font-bold mb-2">
-        Success
-      </h2>
+                <h3 className="text-white font-bold text-xl mb-2">
+                  Success
+                </h3>
 
-      <p className="text-gray-300">
-        Inquiry Submitted Successfully
-      </p>
-    </div>
-  </div>
-)}
+                <p className="text-gray-300">
+                  Inquiry Submitted Successfully
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
       </AnimatePresence>
 
     </section>

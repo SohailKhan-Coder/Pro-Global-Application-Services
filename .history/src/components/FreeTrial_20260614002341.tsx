@@ -126,13 +126,8 @@ if (error) {
     };
 
     setActiveTrials((prev) => [newTrial, ...prev]);
-setShowWizard(false);
 
-setShowSuccessPopup(true);
-
-setTimeout(() => {
-  setShowSuccessPopup(false);
-}, 3000);
+    alert(`Free Trial Request Submitted Successfully!\nTicket ID: ${ticketId}`);
 
     // Reset Form
     setName("");
@@ -461,41 +456,7 @@ setTimeout(() => {
             </motion.div>
           </motion.div>
         )}
-            </AnimatePresence>
-
-      {/* Success Popup */}
-      <AnimatePresence>
-        {showSuccessPopup && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50"
-          >
-            <motion.div
-              initial={{ scale: 0.8, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.8, y: 20 }}
-              className="bg-[#121212] border border-green-500/30 rounded-xl px-8 py-6 shadow-2xl"
-            >
-              <div className="text-center">
-  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/20 flex items-center justify-center">
-    <CheckCircle className="w-10 h-10 text-green-400" />
-  </div>
-
-  <h3 className="text-white font-bold text-xl mb-2">
-    Success
-  </h3>
-
-  <p className="text-gray-300">
-    Request Submitted Successfully
-  </p>
-</div>
-            </motion.div>
-          </motion.div>
-        )}
       </AnimatePresence>
-
     </section>
   );
 }

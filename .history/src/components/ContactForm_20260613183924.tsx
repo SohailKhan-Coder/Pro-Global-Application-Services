@@ -36,7 +36,6 @@ export default function ContactForm({ prefilledService = "", onClearPrefill }: C
 const [message, setMessage] = useState("");
 const [inquiries, setInquiries] = useState<Inquiry[]>([]);
 const [loading, setLoading] = useState(false);
-const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
   // Capture incoming pre-filled service from other boards
   useEffect(() => {
@@ -148,12 +147,9 @@ setMessage("");
 
     if (onClearPrefill) onClearPrefill();
 
-    setShowSuccessPopup(true);
-
-setTimeout(() => {
-  setShowSuccessPopup(false);
-}, 3000);
-
+    alert(
+      `Inquiry received successfully! Ticket ID: ${newInquiry.id}.`
+    );
   } catch (error) {
     console.error("EmailJS Error:", error);
     alert("Failed to send inquiry. Please try again.");
@@ -472,7 +468,7 @@ setTimeout(() => {
         <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30"></span>
 
         <a
-          href="https://wa.me/923316635564?text=Hello%20Pro%20Global%20Application%20Services,%20I%20am%20interested%20in%20your%20services."
+          href="https://wa.me/923000000000?text=Hello%20Pro%20Global%20Application%20Services,%20I%20am%20interested%20in%20your%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="relative flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-xl hover:scale-110 transition-transform"
@@ -481,25 +477,6 @@ setTimeout(() => {
           <FaWhatsapp size={34} className="text-white" />
         </a>
       </div>
-
-      {/* Success Popup */}
-      <AnimatePresence>
-        {showSuccessPopup && (
-  <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/70">
-    <div className="bg-[#121212] rounded-2xl p-8 border border-green-500 shadow-2xl text-center">
-      <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
-
-      <h2 className="text-white text-xl font-bold mb-2">
-        Success
-      </h2>
-
-      <p className="text-gray-300">
-        Inquiry Submitted Successfully
-      </p>
-    </div>
-  </div>
-)}
-      </AnimatePresence>
 
     </section>
   );

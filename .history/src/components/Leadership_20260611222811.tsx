@@ -68,16 +68,15 @@ export default function Leadership() {
                   {/* Styled Avatar Placeholder (Classy Minimalist Initials Portrait) */}
                   <div className="relative shrink-0">
   <img
-    src={exec.data.image}
-    alt={exec.data.imageAlt}
-    className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-[#C8A46D]/30 group-hover:scale-105 transition-transform duration-300"
-  />
+  src={exec.data.image}
+  alt={exec.data.imageAlt}
+  className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover object-top border border-[#C8A46D]/30 group-hover:scale-105 transition-transform duration-300"
+/>
 
   <div className="absolute -bottom-1 -right-1 p-1 bg-black rounded-full border border-white/10 text-[#C8A46D]">
     <ShieldCheck className="w-3.5 h-3.5" />
   </div>
 </div>
-
                   <div>
                     <h3 className="font-display text-xl font-bold text-white tracking-wide group-hover:text-[#C8A46D] transition-colors leading-tight">
                       {exec.data.name}
