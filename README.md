@@ -1,20 +1,80 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Pro Global Application Services
 
-# Run and deploy your AI Studio app
+A modern web platform providing professional university application assistance, academic support, and educational consultancy services for students worldwide.
 
-This contains everything you need to run your app locally.
+## Overview
 
-View your app in AI Studio: https://ai.studio/apps/7a6d2ef2-f750-4b42-8ae7-a3070ff0d354
+Pro Global Application Services helps students achieve their educational goals by offering guidance and support throughout the university admission process. Our platform provides information about academic services, application assistance, scholarship guidance, assignment support, and student consultancy.
 
-## Run Locally
+## Features
 
-**Prerequisites:**  Node.js
+* University Application Assistance
+* International Admissions Guidance
+* Scholarship Support
+* Assignment & Academic Assistance
+* Student Consultancy Services
+* Responsive Modern Design
+* Contact & Inquiry Form
+* Fast and User-Friendly Experience
 
+## Technologies Used
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Supabase
+* Netlify
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/SohailKhan-Coder/Pro-Global-Application-Services.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd Pro-Global-Application-Services
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Services
+
+* University Admission Applications
+* Document Preparation
+* SOP & CV Assistance
+* Scholarship Guidance
+* Assignment Support
+* Academic Consultancy
+
+## Mission
+
+Our mission is to make global education opportunities accessible through reliable, affordable, and professional academic support services.
+
+## Author
+
+Sohail Khan
+
+## License
+
+This project is intended for business and educational service purposes.
