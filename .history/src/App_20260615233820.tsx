@@ -28,7 +28,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [prefilledService, setPrefilledService] = useState("");
 
- const handleScrollTo = (sectionId: string, prefillService?: string) => {
+  const handleScrollTo = (sectionId: string, prefillService?: string) => {
   setActiveSection(sectionId);
 
   if (prefillService) {
@@ -38,9 +38,15 @@ export default function App() {
   const element = document.getElementById(sectionId);
 
   if (element) {
-    element.scrollIntoView({
+    const offset = 76;
+    const top =
+      element.getBoundingClientRect().top +
+      window.pageYOffset -
+      offset;
+
+    window.scrollTo({
+      top,
       behavior: "smooth",
-      block: "start",
     });
   }
 };

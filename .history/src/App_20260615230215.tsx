@@ -28,7 +28,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [prefilledService, setPrefilledService] = useState("");
 
- const handleScrollTo = (sectionId: string, prefillService?: string) => {
+  const handleScrollTo = (sectionId: string, prefillService?: string) => {
   setActiveSection(sectionId);
 
   if (prefillService) {
@@ -38,9 +38,15 @@ export default function App() {
   const element = document.getElementById(sectionId);
 
   if (element) {
-    element.scrollIntoView({
+    const offset = 76; // navbar height
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = element.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
       behavior: "smooth",
-      block: "start",
     });
   }
 };

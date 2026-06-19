@@ -29,9 +29,9 @@ export default function Hero({ onScrollTo }: HeroProps) {
       <div className="absolute inset-0 dots-grid opacity-40 pointers-events-none" />
       
       {/* Atmospheric Radial Gold Glow spots */}
-      <div className="absolute top-[25%] left-[10%] w-[35rem] h-[35rem] rounded-full bg-[#C8A46D]/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[10%] right-[5%] w-[40rem] h-[40rem] rounded-full bg-[#A6834F]/3 blur-[140px] pointer-events-none" />
+      <div className="absolute top-[25%] left-[10%] w-64 h-64 sm:w-[35rem] sm:h-[35rem] rounded-full bg-[#C8A46D]/5 blur-[120px] pointer-events-none" />
 
+<div className="absolute bottom-[10%] right-[5%] w-72 h-72 sm:w-[40rem] sm:h-[40rem] rounded-full bg-[#A6834F]/3 blur-[140px] pointer-events-none" />
       {/* Floating particles (minimalist circles) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(15)].map((_, i) => (

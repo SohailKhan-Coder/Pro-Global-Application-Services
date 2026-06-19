@@ -5,7 +5,7 @@
 
 import { useState, useEffect, FormEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ShieldCheck, CheckCircle, Trash2, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageSquare, Clock, ShieldCheck, CheckCircle, Globe } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { supabase } from "../components/supabase";
@@ -162,28 +162,14 @@ setTimeout(() => {
   }
 };
 
-  const handleClearInquiry = async (id: string) => {
-  const { error } = await supabase
-    .from("inquiries")
-    .delete()
-    .eq("ticket_id", id);
-
-  if (error) {
-    console.error(error);
-    return;
-  }
-
-  setInquiries((prev) =>
-    prev.filter((inq) => inq.id !== id)
-  );
-};
+  
 
   // Pre-filled template layouts for mail/WhatsApp clicks
   const whatsappUrl = `https://wa.me/923316635564?text=${encodeURIComponent(
     "Hello Pro Global Application Services, I am looking for professional form filling and back-office outsourcing support."
   )}`;
-  const mailtoUrl = `mailto:support@proglobalapps.com?subject=Outsourcing%20Inquiry&body=Hello%20Pro%20Global%20Application%20Services,%0A%0AI%20am%20interested%2520in%2520your%2520services%2520for%2520my%2520consultancy.%2520Please%2520contact%2520me.`;
-
+  const mailtoUrl =
+  "mailto:proglobalaplicationservices@gmail.com?subject=Outsourcing Inquiry";
   return (
     <section id="contact" className="py-24 relative overflow-hidden bg-[#0A0A0A] border-t border-white/5">
       {/* Background visual graphics */}
@@ -443,13 +429,7 @@ setTimeout(() => {
                         </div>
                       </div>
 
-                      <button
-                        onClick={() => handleClearInquiry(inq.id)}
-                        className="p-1 rounded bg-white/5 text-[#888888] hover:text-white hover:bg-white/10 transition-colors shrink-0"
-                        title="Remove Inquiry Record"
-                      >
-                        <Trash2 className="w-3.5 h-3.5" />
-                      </button>
+                      
                     </div>
 
                     <div className="mt-4 pt-3 border-t border-white/5 flex justify-end">

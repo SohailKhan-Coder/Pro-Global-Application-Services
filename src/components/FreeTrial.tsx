@@ -151,21 +151,7 @@ setTimeout(() => {
     setLoading(false);
   }
 };
-  const handleClearTrial = async (id: string) => {
-  const { error } = await supabase
-    .from("trial_requests")
-    .delete()
-    .eq("ticket_id", id);
-
-  if (error) {
-    console.error(error);
-    return;
-  }
-
-  setActiveTrials((prev) =>
-    prev.filter((trial) => trial.id !== id)
-  );
-};
+ 
   return (
     <section id="free-trial" className="py-24 relative overflow-hidden bg-[#0A0A0A]">
       {/* Decorative gradient glowing backing */}
@@ -273,13 +259,7 @@ setTimeout(() => {
                             </p>
                           </div>
 
-                          <button
-                            onClick={() => handleClearTrial(trial.id)}
-                            className="p-1 rounded bg-white/5 text-[#888888] hover:text-white hover:bg-white/10 transition-colors"
-                            title="Remove Ticket Tracker"
-                          >
-                            <X className="w-3 h-3" />
-                          </button>
+                          
                         </div>
 
                         {/* Details and tracker statuses */}

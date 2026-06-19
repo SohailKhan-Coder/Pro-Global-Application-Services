@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, Globe, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 
 interface NavbarProps {
   onNavigate: (sectionId: string) => void;
@@ -42,9 +42,12 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
   ];
 
   const handleNavClick = (id: string) => {
-    setIsOpen(false);
+  setIsOpen(false);
+
+  setTimeout(() => {
     onNavigate(id);
-  };
+  }, 350);
+};
 
   return (
     <nav
@@ -63,9 +66,11 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
             className="flex items-center space-x-2 cursor-pointer group"
             onClick={() => handleNavClick("home")}
           >
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#C8A46D] to-[#8a6a3d] flex items-center justify-center shadow-[0_0_15px_rgba(200,164,109,0.3)] transition-transform duration-300 group-hover:scale-105">
-              <Globe className="w-5 h-5 text-black stroke-[2.5]" />
-            </div>
+            <img
+  src="/images/logo.png"
+  alt="PRO GLOBAL Logo"
+  className="w-16 h-16 rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
+/>
             <div>
               <span className="font-display text-lg font-bold tracking-wider text-white flex items-center gap-1">
                 PRO GLOBAL
@@ -108,12 +113,12 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
           </div>
 
           {/* Mobile hamburger toggle */}
-          <div className="lg:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-[#BDBDBD] hover:text-white focus:outline-none transition-colors"
-              aria-label="Toggle Menu"
-            >
+          <div className="lg:hidden">
+  <button
+    onClick={() => setIsOpen(!isOpen)}
+    className="fixed top-4 right-4 z-[9999] p-2 rounded-md text-[#BDBDBD] hover:text-white focus:outline-none transition-colors"
+    aria-label="Toggle Menu"
+  >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>

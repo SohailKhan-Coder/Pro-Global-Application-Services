@@ -86,4 +86,13 @@ body {
   background-image: radial-gradient(rgba(200, 164, 109, 0.1) 1px, transparent 1px);
   background-size: 24px 24px;
 }
-
+.dots-grid {
+  background-image: radial-gradient(rgba(200, 164, 109, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
